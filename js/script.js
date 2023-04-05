@@ -23,8 +23,8 @@ addTodoButton.addEventListener('click', function() {
     // Add Icon
 
     const icon = document.createElement('img');
+    icon.classList.add('icon');
     icon.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Remove_font_awesome.svg/1024px-Remove_font_awesome.svg.png';
-
     icon.height = 20;
 
     document.querySelectorAll('.paragraph_div').forEach(function(paraDiv) {
@@ -36,7 +36,7 @@ addTodoButton.addEventListener('click', function() {
     // Add Event Listeners
 
 
-    paragraph_div.addEventListener('click', function() {
+    icon.addEventListener('click', function() {
         container.removeChild(paragraph_div);
     }
     );
