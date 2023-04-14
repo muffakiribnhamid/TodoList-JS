@@ -1,176 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
-
-html,body {
-    width: 50%;
-    margin: 0 auto;
-    font-family: 'Poppins', Helvetica, sans-serif;
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 body {
-    background-image: url(/images/pexels-eberhard-grossgasteiger-1287145.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-
-}
-.container {
-    width: 360px;
+    background: linear-gradient(120deg, #f6d365,#fda085);
+    color: white;
+    font-family: 'Poppins','sans-seris';
+    min-width: 100vh;
 }
 
-h1 {
-    text-align: center;
-    margin: 0;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    margin-right: 50px;
-    padding: 0;
-    font-size: 30px;
+header {
+    font-size: 1.5rem;
+    font-weight: 100;
 }
 
-
-
-#input-field {
-   width: 300px;
-   height: 46px;
-   border: 1px solid black;
-   border-radius: 10px;
-   color: black;
-   font-size: 20px;
-   font-weight: 600;
-   font-family: 'Poppins', Helvetica, sans-serif;
-   vertical-align: middle;
-}
-
-#input-field:hover {
-    outline: none;
-    background-color: transparent;
-}
-
-#add-todo,#clear-all {
-    height: 40px;
-    width: 30px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: transparent;
-    vertical-align: middle;
-    font-size: 30px;
-}
-
-.to-dos {
-    margin-top: 25px;
-}
-.paragraph-styling {
-    margin: 0;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.paragraph_div {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 2px;
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: transparent;
-    width: 300px;
-    height: 40px;
+header,form {
+    min-height: 20vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 
+form input, form button {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border:none ;
+    background: white;
+
+}
+
+form button {
+    color: #d88771;
+    background-color: white;
+    cursor: pointer;
+    transition:  all 0.3s ease;
+}
+form button:hover {
+    background: #d88771;
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, .complete-btn {
+    background-color: #ff6f47;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background: rgb(73,204,73);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg); 
+    opacity: 0;
+
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select {
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+        background: white;
+        color: #ff6f47;
+        
+}
+
 footer {
-    margin-top: auto; /* push footer to the bottom */
-    background-color: #ccc;
-    height: 50px;
+    background-color: white;
+    color: black;
     position: fixed;
     bottom: 0;
     left: 0;
+    height: 40px;
+    justify-content: center;
     width: 100%;
-  }
-
-  footer p {
     text-align: center;
-  }
-
-  .icon:hover {
-    cursor: pointer;
-
-  }
-
-
-  @media only screen and (max-width: 480px) {
-    /* Styles for phones */
-    html,body {
-      width: 100%;
-    }
-   
-    h1 {
-      margin-top: 30px;
-      margin-right: 10px;
-      font-size: 24px;
-    }
-    #input-field {
-      width: 80%;
-      font-size: 16px;
-      text-align: center;
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-
-
-    }
-
-    .container {
-        text-align: center;
-    }
-
-    #add-todo {
-        height: 40px;
-        width: 30px;
-        border: 1px solid rgb(0, 0, 0);
-        border-radius: 5px;
-        background-color: transparent;
-        vertical-align: middle;
-        align-items: center;
-        justify-content: center;
-        margin-left: 140px;
-        margin-top: 10px;
-        font-size: 30px;
-    }
-
-    #clear-all {
-        height: 40px;
-        width: 30px;
-        border: 1px solid rgb(0, 0, 0);
-        border-radius: 5px;
-        background-color: transparent;
-        vertical-align: middle;
-        align-items: center;
-        justify-content: center;
-        margin-top: 10px;
-        font-size: 30px;
-    }
-
-      
-
-      
-    .paragraph_div {
-      width: 80%;
-      font-size: 16px;
-      margin: 0 auto;
-      margin-top: 10px;
-    }
-    footer {
-      height: 70px;
-    }
-    footer p {
-      font-size: 14px;
-    }
-  }
-  
+}
