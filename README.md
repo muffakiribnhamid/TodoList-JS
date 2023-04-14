@@ -1,8 +1,11 @@
 # TodoList-JS
 TodoList Site Made Using HTML CSS &amp; JS
 
-![image](https://user-images.githubusercontent.com/97360825/230033693-5bcf1d91-45ef-44ff-97e2-003d4debd496.png) </br>
-![image](https://user-images.githubusercontent.com/97360825/230033922-6c07dc45-0e77-48e3-98cd-2ce388f9ff05.png)
+![image](https://user-images.githubusercontent.com/97360825/232172078-001eb744-1604-448e-b4e0-b4e60d67b5e3.png)
+![image](https://user-images.githubusercontent.com/97360825/232172058-102ec91d-8380-48f5-86a6-bd0fab826996.png)
 
-
-Thanks
+Features
+1. It can Save Todos to Local Storage
+2. It Filters the Todos
+3. It can Set Todos to Completed or Delete the Todos
+4. It is Not Responsive
